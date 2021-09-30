@@ -10,3 +10,4 @@
             require_once('views/Pages/error.php');
         }
     }
+    

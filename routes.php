@@ -1,5 +1,5 @@
 <?php
-    $controllers = array('pages'=>['home','error']);
+    $controllers = array('pages'=>['home','error'],'quataion'=>['index']);
 
     function call($controller,$action){
        echo "routes to ".$controller."-".$action."<br>";
@@ -8,6 +8,9 @@
         {
             case "pages" : $controller = new PagesController();
                            break;
+            case "Quataion" : require_once("models/quatationModel.php");
+                               $controller = new QuataionController();
+                               break;
         }
         $controller->{$action}();
     }
