@@ -1,6 +1,11 @@
+<<<<<<< Updated upstream
 <?php
 class Product{
     public $ProductID;
+=======
+<?php 
+class Product{
+>>>>>>> Stashed changes
     public $ProductName;
 
     public function_construct($ProductID,$ProductName){
@@ -8,9 +13,14 @@ class Product{
         $this->ProductName=$ProductName;
         
     }
+<<<<<<< Updated upstream
 
     public static function getAll(){
         $ProductDetailList = [];
+=======
+    public static function getAll(){
+        $ProductList = [];
+>>>>>>> Stashed changes
         require("connection_connect.php");
         $result = $conn->query($sql);
         while($my_row==$result->fetch_assoc()){
