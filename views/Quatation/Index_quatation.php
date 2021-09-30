@@ -13,9 +13,13 @@
 
 <body>
     
+<div class="container">
+    <h1 class="mt-5">Quotation Page</h1>
+    new quotation<a href=?controller=quataion&action=newQuatation>Click</a><br>
+    
 <table id="QTtable" class="table table-bordered table-striped">
     <thead>
-        <th>#</th>
+        
         <th>No</th>
         <th>Date</th>
         <th>EmployeeID</th>
@@ -31,21 +35,21 @@
 
     <tbody>
         <?php
-        include_once('quatationModel.php');
-        $sql = $getAll->getAll();
-        while($row=mysqli_fetch_array($sql)){
+        
+        
+        foreach($quatation_list as $q){
 
         ?>
         <tr>
-                <td><?php echo $row['No'];?></td>
-                <td><?php echo $row['Date'];?></td>
-                <td><?php echo $row['EmployeeID'];?></td>
-                <td><?php echo $row['CustomerID'];?></td>
-                <td><?php echo $row['Deposit'];?></td>
-                <td><?php echo $row['Credit'];?></td>
-                <td><?php echo $row['ColorID'];?></td>
-                <td><?php echo $row['CustomerOrder'];?></td>
-                <td><?php echo $row['CustomerScreenOrder'];?></td>
+                <td><?php echo $q->No?></td>
+                <td><?php echo $q->Date?></td>
+                <td><?php echo $q->EmID?></td>
+                <td><?php echo $q->CusID?></td>
+                <td><?php echo $q->Deposit?></td>
+                <td><?php echo $q->Credit?></td>
+                <td><?php echo $q->ColorID?></td>
+                <td><?php echo $q->CusOrder?></td>
+                <td><?php echo $q->CusScreenOrder?></td>
                 <td><a href="update.php?No=<?php echo $row['No'];?>" class="btn btn-primary">Edit</td>
                 <td><a href="delete.php?No=<?php echo $row['No'];?>" class="btn btn-danger">Delete</td>
             </tr>
@@ -56,6 +60,7 @@
 
     </tbody>
 </table>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" 

@@ -13,7 +13,8 @@
     <head></head>
         <body>
             <?php echo "controller =".$controller.",action = ".$action;?>
-            <br>[<a href="">HOME</a>][<a href="?controller=Quatation&action=index">Quatation</a>]<br>
+            <br>[<a href="?controller=pages&action=home">HOME</a>]
+            [<a href="?controller=quataion&action=index">Quatation</a>]<br>
             <?php require_once("routes.php"); ?>
         </body>
     
