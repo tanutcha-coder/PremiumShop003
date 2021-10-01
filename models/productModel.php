@@ -12,7 +12,7 @@ class Product{
     public $MinimumOrder;
     public $CatID;
 
-    public function_construct($ProductID,$ProductName,$Size,$Detail,$MinimumOrder,$CatID){
+    public function _construct($ProductID,$ProductName,$Size,$Detail,$MinimumOrder,$CatID){
         $this->ProductID=$ProductID;
         $this->ProductName=$ProductName;
         $this->Size=$Size;
