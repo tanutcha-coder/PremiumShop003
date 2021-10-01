@@ -1,6 +1,11 @@
 <?php class ProductDetail{
     public $MinQuantity,$Price,$Screen,$MaxQuantity;
+<<<<<<< Updated upstream
     public function_construct($ProductID,$ProductDID,$MinQuantity,$Price,$Screen,$MaxQuantity){
+=======
+    public function_construct($ProductID,$ProductName,$MinQuantity,$Price,$Screen,$MaxQuantity)
+    {
+>>>>>>> Stashed changes
         $this->ProductID=$ProductID;
         $this->ProductDID=$ProductDID;
         $this->MinQuantity=$MinQuantity;
@@ -25,6 +30,7 @@
         require("connection_close.php");
         return $ProductDetailList;
     }
+<<<<<<< Updated upstream
     public static function get($ProductID){
         require("connection_connect.php");
         $sql = "SELECT * FROM Product,ProductDetail WHERE Product.ProductID=ProductDetail.ProductID";
@@ -40,3 +46,7 @@
 
     }
 }?>
+=======
+}
+?>
+>>>>>>> Stashed changes
