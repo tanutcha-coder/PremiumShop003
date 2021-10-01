@@ -1,7 +1,8 @@
 <?php
 $controllers = array(
     'pages' => ['home', 'error'],
-    'quataion' => ['index','newQuatation']
+    'quataion' => ['index','newQuatation'],
+    'ProductDetail'=>['index']
 );
 
 function call($controller, $action)
@@ -16,6 +17,10 @@ function call($controller, $action)
             require_once("models/quatationModel.php");
             require_once("models/employeeModel.php");
             $controller = new QuataionController();
+            break;
+        case "ProductDetail":
+            require_once("models/ProductDetailModel.php");
+            $controller=new ProductDetailController();
             break;
     }
     $controller->{$action}();
