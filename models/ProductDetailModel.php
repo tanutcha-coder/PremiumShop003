@@ -1,19 +1,20 @@
-<?php class ProductDetail{
-    public $MinQuantity,$Price,$Screen,$MaxQuantity;
-<<<<<<< Updated upstream
-    public function_construct($ProductID,$ProductDID,$MinQuantity,$Price,$Screen,$MaxQuantity){
-=======
-    public function_construct($ProductID,$ProductName,$MinQuantity,$Price,$Screen,$MaxQuantity)
+<?php 
+class ProductDetail
+{
+    public $ProductID, $ProductDID, $MinQuantity, $Price, $Screen, $MaxQuantity;
+
+    public function _construct($ProductID, $ProductDID, $MinQuantity, $Price, $Screen, $MaxQuantity)
     {
->>>>>>> Stashed changes
-        $this->ProductID=$ProductID;
-        $this->ProductDID=$ProductDID;
-        $this->MinQuantity=$MinQuantity;
-        $this->Price=$Price;
-        $this->Screen=$Screen;
-        $this->MaxQuantity=$MaxQuantity;
+        $this->ProductID = $ProductID;
+        $this->ProductDID = $ProductDID;
+        $this->MinQuantity = $MinQuantity;
+        $this->Price = $Price;
+        $this->Screen = $Screen;
+        $this->MaxQuantity = $MaxQuantity;
     }
-    public static function getAll(){
+
+    public static function getAll()
+    {
         $ProductDetailList = [];
         require("connection_connect.php");
         $sql="SELECT *FROM `ProductDetail`";
@@ -30,7 +31,6 @@
         require("connection_close.php");
         return $ProductDetailList;
     }
-<<<<<<< Updated upstream
     public static function get($ProductID){
         require("connection_connect.php");
         $sql = "SELECT * FROM Product,ProductDetail WHERE Product.ProductID=ProductDetail.ProductID";
@@ -45,8 +45,5 @@
         return new ProductDetail($ProductID,$ProductName,$MinQuantity,$Price,$Screen,$MaxQuantity);
 
     }
-}?>
-=======
 }
 ?>
->>>>>>> Stashed changes
