@@ -2,9 +2,9 @@
     public $No,$ProductName,$CusOrder,$CusScreenOrder;
     public function _construct($No,$CusOrder,$CusScreenOrder)
     {
-        this->No = $No;
-        this->CusOrder = $CusOrder;
-        this->CusScreenOrder = $CusScreenOrder;
+        $this->No = $No;
+        $this->CusOrder = $CusOrder;
+        $this->CusScreenOrder = $CusScreenOrder;
     }
     public static function getAll(){
         $QuatationList = [];
