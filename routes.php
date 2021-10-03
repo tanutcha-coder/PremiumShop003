@@ -1,8 +1,13 @@
 <?php
 $controllers = array(
     'pages' => ['home', 'error'],
+<<<<<<< HEAD
+    'quataion' => ['index','newQuatation'],
+    'ProductDetail'=>['index']
+=======
     'quataion' => ['index', 'newQuatation', 'addQuatation', 'search', 'update_quatation', 'update','delete_quatation', 'delete'],
     'product' => ['index', 'newProduct', 'addProduct', 'search', 'update_product', 'update','delete_product', 'delete']
+>>>>>>> 36e9486ec80f502aa3cfce54c0c0cd29579f32a5
 );
 
 function call($controller, $action)
@@ -19,11 +24,17 @@ function call($controller, $action)
             require_once("models/employeeModel.php");
             $controller = new QuataionController();
             break;
+<<<<<<< HEAD
+        case "ProductDetail":
+            require_once("models/ProductDetailModel.php");
+            $controller=new ProductDetailController();
+=======
 
         case "product":
             require_once("models/quatationModel.php");
             require_once("models/productModel.php");
             $controller = new ProductController();
+>>>>>>> 36e9486ec80f502aa3cfce54c0c0cd29579f32a5
             break;
     }
     $controller->{$action}();

@@ -8,6 +8,20 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
 }
 ?>
 <html>
+<<<<<<< HEAD
+    <head></head>
+        <body>
+            <?php echo "controller =".$controller.",action = ".$action;?>
+            <br>[<a href="?controller=pages&action=home">HOME</a>]
+            [<a href="?controller=quataion&action=index">Quatation</a>]<br>
+            [<a href="?controller=quataion&action=index">QuatationDetail</a>]<br>
+            [<a href = "?controller=ProductDetail&action=index">ProductDetail]</a>
+            <?php require_once("routes.php"); ?>
+        </body>
+    
+</html>
+    
+=======
 <header class="p-3 bg-dark text-white">
 
     <div class="container-fluid">
@@ -41,3 +55,4 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
 </body>
 
 </html>
+>>>>>>> 36e9486ec80f502aa3cfce54c0c0cd29579f32a5
