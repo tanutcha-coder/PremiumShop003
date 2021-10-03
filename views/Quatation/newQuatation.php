@@ -14,7 +14,13 @@
         
         <div class="row ">
         <div class="col">
-            <div class="" >
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col-sm-9  p-3 " >
                 <img  alt="" class="img-fluid" src="https://i.postimg.cc/dV0M4nZM/undraw-Add-files-re-v09g.png">
             </div>
         </div>

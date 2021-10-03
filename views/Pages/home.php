@@ -14,7 +14,7 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <h1 class="animated fadeInDown" style="animation-delay: 1s">Premium <span class="text-info">Shop</span></h1>
-                            <p class="animated fadeInUp" style="animation-delay: 2s">For Online shopping </p>
+                            <p class="animated fadeInUp" style="animation-delay: 2s">Welcome to our homepage </p>
                             <button class="btn btn-info text-white" type="button">Quotation</button> 
                             <button class="btn btn-info text-white" type="button">QuotationDetail</button>
                             <button class="btn btn-info text-white" type="button">Product</button> 

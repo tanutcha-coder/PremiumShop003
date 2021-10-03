@@ -14,6 +14,7 @@
 <body>
 
     <div class="container">
+        
         <h1 class="mt-5">Quotation Page<span><a href="?controller=quataion&action=newQuatation" class="btn btn-Success">Add+</a><br></span></h1>
 
         <br>

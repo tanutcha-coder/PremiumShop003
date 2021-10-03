@@ -23,9 +23,9 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="?controller=pages&action=home" class="nav-link px-2 text-white">Home</a></li>
-                <li><a href="?controller=quataion&action=index" class="nav-link px-2 text-white">Quatation</a></li>
-                <li><a href="?controller=quataion&action=index" class="nav-link px-2 text-white">QuatationDetail</a></li>
-                <li><a href="?controller=product&action=index" class="nav-link px-2 text-white">productModel</a></li>
+                <li><a href="?controller=quataion&action=index" class="nav-link px-2 text-white">Quotation</a></li>
+                <li><a href="?controller=quataion&action=index" class="nav-link px-2 text-white">QuotationDetail</a></li>
+                <li><a href="?controller=product&action=index" class="nav-link px-2 text-white">Product</a></li>
                 <li><a href="#" class="nav-link px-2 text-white">About</a></li>
             </ul>
 
