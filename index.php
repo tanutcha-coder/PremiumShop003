@@ -12,7 +12,7 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
 
     <div class="container-fluid">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            Premium Shop
+            <h3>Premium Shop</h3>
             
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
 
