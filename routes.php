@@ -3,7 +3,7 @@ $controllers = array(
     'pages' => ['home', 'error'],
     'ProductDetail'=>['index'],
     'quataion' => ['index', 'newQuatation', 'addQuatation', 'search', 'update_quatation', 'update','delete_quatation', 'delete'],
-    'product' => ['index', 'newProduct', 'addProduct', 'search', 'update_product', 'update','delete_product', 'delete']
+    'quationdetail' => ['index', 'newQuationDetail', 'addQuationDetail', 'search', 'update_quationdetail', 'update','delete_quationdetail', 'delete']
 );
 
 function call($controller, $action)
@@ -24,10 +24,10 @@ function call($controller, $action)
             require_once("models/ProductDetailModel.php");
             $controller=new ProductDetailController();
             break;
-        case "product":
+        case "quationdetail":
                 require_once("models/quatationModel.php");
-                require_once("models/productModel.php");
-                $controller = new ProductController();
+                require_once("models/quationdetailModel.php");
+                $controller = new QuationDetailController();
     }
     $controller->{$action}();
 }

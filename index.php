@@ -8,20 +8,6 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
 }
 ?>
 <html>
-<<<<<<< HEAD
-    <head></head>
-        <body>
-            <?php echo "controller =".$controller.",action = ".$action;?>
-            <br>[<a href="?controller=pages&action=home">HOME</a>]
-            [<a href="?controller=quataion&action=index">Quatation</a>]<br>
-            [<a href="?controller=quataion&action=index">QuatationDetail</a>]<br>
-            [<a href = "?controller=ProductDetail&action=index">ProductDetail]</a>
-            <?php require_once("routes.php"); ?>
-        </body>
-    
-</html>
-    
-=======
 <header class="p-3 bg-dark text-white">
 
     <div class="container-fluid">
@@ -37,9 +23,8 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="?controller=pages&action=home" class="nav-link px-2 text-white">Home</a></li>
-                <li><a href="?controller=quataion&action=index" class="nav-link px-2 text-white">Quotation</a></li>
-                <li><a href="?controller=quataion&action=index" class="nav-link px-2 text-white">QuotationDetail</a></li>
-                <li><a href="?controller=product&action=index" class="nav-link px-2 text-white">Product</a></li>
+                <li><a href="?controller=quataion&action=index" class="nav-link px-2 text-white">Quatation</a></li>
+                <li><a href="?controller=quationdetail&action=index" class="nav-link px-2 text-white">QuatationDetail</a></li>
                 <li><a href="#" class="nav-link px-2 text-white">About</a></li>
             </ul>
 
@@ -55,4 +40,3 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
 </body>
 
 </html>
->>>>>>> 36e9486ec80f502aa3cfce54c0c0cd29579f32a5

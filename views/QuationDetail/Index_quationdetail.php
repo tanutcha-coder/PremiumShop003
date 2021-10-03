@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Product Page</title>
+    <title>Quatation Detail Page</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -14,12 +14,12 @@
 <body>
 
     <div class="container">
-        <h1 class="mt-5">Product Page</h1>
-        new product<a href="?controller=product&action=newProduct">Click</a><br>
+        <h1 class="mt-5">Quatation Detail Page</h1>
+        new quatation detail <a href="?controller=quationdetail&action=newQuationDetail">Click</a><br>
         
         <form method="get" action="">
             <input type="text" name="key">
-            <input type="hidden" name="controller" value="product" />
+            <input type="hidden" name="controller" value="quationdetail" />
             <button type="submit" name="action" value="search">Search</button>
         </form>
 
@@ -30,26 +30,28 @@
                 <th>ProductName</th>
                 <th>ColorName</th>
                 <th>CusOrder</th>
+                <th>CusScreenOrder</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </thead>
 
             <tbody>
                 <?php
-                //print_r($Product_list);
+                // print_r($Product_list);
 
-                foreach ($Product_list as $product) {
+                foreach ($QuationDetail_list as $quationdetail) {
                     
                 ?>
                     <tr>
-                        <td><?php echo $product->No ?></td>
-                        <td><?php echo $product->ProductID ?></td>
-                        <td><?php echo $product->ProductName ?></td>
-                        <td><?php echo $product->ColorName ?></td>
-                        <td><?php echo $product->CusOrder ?></td>
+                        <td><?php echo $quationdetail->No ?></td>
+                        <td><?php echo $quationdetail->ProductID ?></td>
+                        <td><?php echo $quationdetail->ProductName ?></td>
+                        <td><?php echo $quationdetail->ColorName ?></td>
+                        <td><?php echo $quationdetail->CusOrder ?></td>
+                        <td><?php echo $quationdetail->CusScreenOrder ?></td>
 
-                        <td><a href="?controller=product&action=update_product&No=<?php echo $product->No ?>" class="btn btn-primary">Edit</td>
-                        <td><a href="?controller=product&action=delete_product&No=<?php echo $product->No ?>" class="btn btn-danger">Delete</td>
+                        <td><a href="?controller=quationdetail&action=update_quationdetail&No=<?php echo $quationdetail->No ?>" class="btn btn-primary">Edit</td>
+                        <td><a href="?controller=quationdetail&action=delete_quationdetail&No=<?php echo $quationdetail->No ?>" class="btn btn-danger">Delete</td>
                     </tr>
                 <?php
 

@@ -2,7 +2,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Update Product Page</title>
+    <title>Update Quatation Detail Page</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -11,18 +11,18 @@
 <body>
 
     <div class="container">
-        <h1 class="mt-5">Update Product Page</h1><br>
+        <h1 class="mt-5">Update Quatation Detail Page</h1><br>
         <form method="get" action="">
             <div class="mb-3">
                 <label for="ProductID" class="form-label">รหัสสินค้า (ProductID)</label>
-                <input type="text" class="form-control" name="ProductID" value="<?php echo $product_list->ProductID; ?>" readonly />
+                <input type="text" class="form-control" value="<?php echo $product_list->ProductID; ?>" readonly />
             </div>
             <div class="mb-3">
                 <label for="ProDuctName" class="form-label">ขื่อสินค้า (ProductName)</label>
-                <input type="text" class="form-control" name="ProductName" value="<?php echo $Product_list->ProductName; ?>">
+                <input type="text" class="form-control" value="<?php echo $Product_list->ProductName; ?>">
             </div>
 
-                <input type="hidden" name="controller" value="Product">
+                <input type="hidden" name="controller" value="quationdetail">
                 <button type="submit" class="btn-btn-primary" name="action" value="index">Back</button>
                 <button type="submit" class="btn-btn-green" name="action" value="update">Update</button>
 

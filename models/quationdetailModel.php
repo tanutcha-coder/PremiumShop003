@@ -1,18 +1,20 @@
 <?php
-class Product{
+class QuationDetail{
     public $ProductID;
     public $ProductName;
     public $Size;
     public $Detail;
     public $MinimumOrder;
     public $CatID;
+    public $CusScreenOrder;
 
-    public function __construct($ProductID,$ProductName,$No,$CusOrder,$ColorName){
+    public function __construct($ProductID,$ProductName,$No,$CusOrder,$ColorName,$CusScreenOrder){
         $this->ProductID=$ProductID;
         $this->ProductName=$ProductName;
         $this->No=$No;
         $this->CusOrder=$CusOrder;
         $this->ColorName=$ColorName;
+        $this->CusScreenOrder=$CusScreenOrder;
         
     }
     public static function getAll(){
@@ -28,7 +30,8 @@ class Product{
             $No=$my_row["No"];
             $CusOrder=$my_row["CusOrder"];
             $ColorName=$my_row["ColorName"];
-            $ProductList[]=new Product($ProductID,$ProductName,$No,$CusOrder,$ColorName);
+            $CusScreenOrder=$my_row["CusScreenOrder"];
+            $ProductList[]=new QuationDetail($ProductID,$ProductName,$No,$CusOrder,$ColorName,$CusScreenOrder);
         }
         require("connection_close.php");
         return $ProductList;   
@@ -44,7 +47,7 @@ class Product{
             $No=$my_row["No"];
             $CusOrder=$my_row["CusOrder"];
             $ColorName=$my_row["ColorName"];
-            $Product[]=new Product($ProductID,$ProductName,$No,$CusOrder,$ColorName);
+            $Product[]=new QuationDetail($ProductID,$ProductName,$No,$CusOrder,$ColorName,$CusScreenOrder);
         }
         require("connect_close.php");
         return $ProductList;   
