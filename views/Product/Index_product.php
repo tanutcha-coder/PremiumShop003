@@ -23,7 +23,7 @@
             <button type="submit" name="action" value="search">Search</button>
         </form>
 
-        <table id="QTtable" class="table table-bordered table-striped">
+        <table id="QTtable" class="table table-bordered table-striped" style="text-align: center;">
             <thead>
                 <th>QuatationID</th>
                 <th>ProductID</th>
