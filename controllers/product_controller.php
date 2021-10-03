@@ -37,7 +37,6 @@ class ProductController
         $ProductID = $_GET['ProductID'];
         echo $ProductID;
         $Product_list = Product::getAll($ProductID);
-        // $quatation_list = Quatation::getAll();
         $ProductName_list = Product::getAll();
         require_once('views/Product/update_product.php');
     }
@@ -58,7 +57,6 @@ class ProductController
         $ProductName = $_GET['ProductName'];
         echo $ProductName;
         $Product_list = Product::getAll($ProductName);
-        // $quatation_list = Quatation::getAll();
         require_once('views/Product/delete_product.php');
     }
     public function delete()
