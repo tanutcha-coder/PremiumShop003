@@ -25,33 +25,31 @@
 
         <table id="QTtable" class="table table-bordered table-striped">
             <thead>
-
+                <th>QuatationID</th>
                 <th>ProductID</th>
                 <th>ProductName</th>
-                <th>Size</th>
-                <th>Detail</th>
-                <th>MinimumOrder</th>
-                <th>CatID</th>
-
+                <th>ColorName</th>
+                <th>CusOrder</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </thead>
 
             <tbody>
                 <?php
+                //print_r($Product_list);
 
-
-                foreach ($Product_list as $q) {
-
+                foreach ($Product_list as $product) {
+                    
                 ?>
                     <tr>
-                        <td><?php echo $q->ProductID ?></td>
-                        <td><?php echo $q->ProductName ?></td>
-                        <td><?php echo $q->Size ?></td>
-                        <td><?php echo $q->Detail ?></td>
-                        <td><?php echo $q->MinimumOrder ?></td>
-                        <td><?php echo $q->CatID ?></td>
+                        <td><?php echo $product->No ?></td>
+                        <td><?php echo $product->ProductID ?></td>
+                        <td><?php echo $product->ProductName ?></td>
+                        <td><?php echo $product->ColorName ?></td>
+                        <td><?php echo $product->CusOrder ?></td>
 
-                        <td><a href="?controller=product&action=update_product&No=<?php echo $q->No ?>" class="btn btn-primary">Edit</td>
-                        <td><a href="?controller=product&action=delete_product&No=<?php echo $q->No ?>" class="btn btn-danger">Delete</td>
+                        <td><a href="?controller=product&action=update_product&No=<?php echo $product->No ?>" class="btn btn-primary">Edit</td>
+                        <td><a href="?controller=product&action=delete_product&No=<?php echo $product->No ?>" class="btn btn-danger">Delete</td>
                     </tr>
                 <?php
 
