@@ -15,6 +15,7 @@ function call($controller, $action)
             break;
         case "quataion":
             require_once("models/quatationModel.php");
+            require_once("models/customerModel.php");
             require_once("models/employeeModel.php");
             $controller = new QuataionController();
             break;

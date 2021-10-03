@@ -22,15 +22,31 @@
             <input type="DATE" class="form-control" name="Date">
         </div>
         <div class="mb-3">
-            <label for="EmID" class="form-label">รหัสลูกค้า (EmployeeID)</label>
+            <label for="EmID" class="form-label">รหัสพนักงาน (EmployeeID)</label>
             <select name="EmID">
-                <?php foreach($quatation_List as $qua){
-                    echo "<option value=$qua->CusID>
-                    $qua->name</option>";}?>
+                <?php foreach($employee_list as $em){
+                    echo "<option value='$em->EmID'>$em->EmName</option>";}?>
+            </select><br>
+        <div class="mb-3">
+            <label for="CusID" class="form-label">รหัสลูกค้า (CustomerID)</label>
+            <select name="CusID">
+                <?php foreach($customer_list as $cus){
+                    echo "<option value='$cus->CusID'>
+                    $cus->CusName</option>";}?>
             </select><br>
         </div>
-        <input type="hidden" name="controller" value="quatation">
-        <button type="submit" class="btn-btn-primary">Submit</button>
+        <div class="mb-3">
+            <label for="Deposit" class="form-label">จำนวนมัดจำ(%)</label>
+            <input type="int" class="form-control" name="Deposit">
+        </div>
+        <div class="mb-3">
+            <label for="Credit" class="form-label">จำนวนเครดิต(วัน)</label>
+            <input type="int" class="form-control" name="Credit">
+        </div>
+        
+        <input type="hidden" name="controller" value="quataion">
+        <button type="submit" class="btn-btn-primary" name="action" value="index">Back</button>
+        <button type="submit" class="btn-btn-primary" name="action" value="addQuatation">Save</button>
 
     </form>
 </div>
