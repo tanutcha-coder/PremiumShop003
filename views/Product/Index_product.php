@@ -39,7 +39,7 @@
                 <?php
 
 
-                foreach ($product_list as $q) {
+                foreach ($Product_list as $q) {
 
                 ?>
                     <tr>

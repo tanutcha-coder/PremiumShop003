@@ -19,7 +19,7 @@ class Product{
     public static function getAll(){
         $ProductList = [];
         require("connection_connect.php");
-        $sql = "SELECT * FROM `Product`";
+        $sql = "SELECT * FROM `product`";
         $result = $conn->query($sql);
         while($my_row=$result->fetch_assoc()){
             $ProductID=$my_row["ProductID"];
