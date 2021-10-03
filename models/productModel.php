@@ -21,15 +21,16 @@ class Product{
         require("connection_connect.php");
         $sql = "SELECT * FROM `Product`";
         $result = $conn->query($sql);
-        while($my_row==$result->fetch_assoc()){
+        while($my_row=$result->fetch_assoc()){
             $ProductID=$my_row["ProductID"];
             $ProductName=$my_row["ProductName"];
             $Size=$my_row["Size"];
             $MinimumOrder=$my_row["MinimumOrder"];
             $CatID=$my_row["CatID"];
+            $Detail=$my_row["Detail"];
             $ProductList[]=new Product($ProductID,$ProductName,$Size,$Detail,$MinimumOrder,$CatID);
         }
-        require("connect_close.php");
+        require("connection_close.php");
         return $ProductList;   
     }
     
