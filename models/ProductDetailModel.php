@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php class ProductDetail{
     public $MinQuantity,$Price,$Screen,$MaxQuantity,$ProductDID,$ProductID,$ProductName;
     public function _construct($ProductID,$ProductDID,$MinQuantity,$Price,$Screen,$MaxQuantity,$ProductName){
@@ -8,8 +9,25 @@
         $this->Screen=$Screen;
         $this->MaxQuantity=$MaxQuantity;
         $this->ProductName=$ProductName;
+=======
+<?php 
+class ProductDetail
+{
+    public $ProductID, $ProductDID, $MinQuantity, $Price, $Screen, $MaxQuantity;
+
+    public function _construct($ProductID, $ProductDID, $MinQuantity, $Price, $Screen, $MaxQuantity)
+    {
+        $this->ProductID = $ProductID;
+        $this->ProductDID = $ProductDID;
+        $this->MinQuantity = $MinQuantity;
+        $this->Price = $Price;
+        $this->Screen = $Screen;
+        $this->MaxQuantity = $MaxQuantity;
+>>>>>>> 36e9486ec80f502aa3cfce54c0c0cd29579f32a5
     }
-    public static function getAll(){
+
+    public static function getAll()
+    {
         $ProductDetailList = [];
         require("connection_connect.php");
         $sql="SELECT * FROM `productdetail`";
@@ -41,6 +59,7 @@
         return new ProductDetail($ProductID,$ProductName,$MinQuantity,$Price,$Screen,$MaxQuantity);
 
     }
+<<<<<<< HEAD
     public static function search($key){
         require("connection_connect.php");
         $sql="SELECT *FROM Product,ProductDetail 
@@ -76,3 +95,7 @@
         return "delete success $result row";
     }
 }?>
+=======
+}
+?>
+>>>>>>> 36e9486ec80f502aa3cfce54c0c0cd29579f32a5

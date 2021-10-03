@@ -1,12 +1,12 @@
 <?php class QuatationDetail{
     public $No,$ProductName,$CusOrder,$CusScreenOrder;
-    public function_construct($No,$CusOrder,$CusScreenOrder)
+    public function _construct($No,$CusOrder,$CusScreenOrder)
     {
-        this->No = $No;
-        this->CusOrder = $CusOrder;
-        this->CusScreenOrder = $CusScreenOrder;
+        $this->No = $No;
+        $this->CusOrder = $CusOrder;
+        $this->CusScreenOrder = $CusScreenOrder;
     }
-    public static fuction getAll(){
+    public static function getAll(){
         $QuatationList = [];
         require("connection_connect.php");
         $sql = "select No,CusOrder,CusScreenOrder from Quatation";
