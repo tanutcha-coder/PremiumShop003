@@ -20,6 +20,8 @@
                         <th>MaxQuantity</th>
                         <th>Screen</th>
                         <th>Price</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
 
                     </thead>
 

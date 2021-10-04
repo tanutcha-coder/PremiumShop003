@@ -1,16 +1,17 @@
-<?php class ProductDetail
+<?php
+class ProductDetail
 {
+    public $ProductID,  $ProductDID, $ProductName, $MinQuantity, $MaxQuantit, $Screen, $Price;
 
-    public $MinQuantity, $Price, $Screen, $MaxQuantity, $ProductDID, $ProductID, $ProductName;
-    public function __construct($ProductID, $ProductDID, $MinQuantity, $Price, $Screen, $MaxQuantity, $ProductName)
+    public function __construct($ProductID, $ProductDID, $ProductName, $MinQuantity, $MaxQuantity, $Screen, $Price)
     {
         $this->ProductID = $ProductID;
         $this->ProductDID = $ProductDID;
-        $this->MinQuantity = $MinQuantity;
-        $this->Price = $Price;
-        $this->Screen = $Screen;
-        $this->MaxQuantity = $MaxQuantity;
         $this->ProductName = $ProductName;
+        $this->MinQuantity = $MinQuantity;
+        $this->MaxQuantity = $MaxQuantity;
+        $this->Screen = $Screen;
+        $this->Price = $Price;
     }
     public static function getAll()
     {
@@ -21,18 +22,19 @@
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
             $ProductID = $my_row["ProductID"];
-            $ProductName = $my_row["ProductName"];
             $ProductDID = $my_row["ProductDID"];
+            $ProductName = $my_row["ProductName"];
             $MinQuantity = $my_row["MinQuantity"];
-            $Price = $my_row["Price"];
-            $Screen = $my_row["Screen"];
             $MaxQuantity = $my_row["MaxQuantity"];
-            $ProductDetail_list[] = new ProductDetail($ProductID, $ProductDID, $MinQuantity, $Price, $Screen, $MaxQuantity, $ProductName);
+            $Screen = $my_row["Screen"];
+            $Price = $my_row["Price"];
+
+            $ProductDetail_list[] = new ProductDetail($ProductID, $ProductDID,  $ProductName, $MinQuantity,  $MaxQuantity, $Screen, $Price);
         }
         require("connection_close.php");
         return $ProductDetail_list;
     }
-    public static function get($ProductID)
+    public static function get($ProductDID)
     {
         require("connection_connect.php");
         $sql = "SELECT * FROM `ProductDetail` INNER JOIN `Product`
@@ -40,65 +42,67 @@
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
         $ProductID = $my_row["ProductID"];
+        $ProductDID = $my_row["ProductDID"];
         $ProductName = $my_row["ProductName"];
         $MinQuantity = $my_row["MinQuantity"];
-        $Price = $my_row["Price"];
-        $Screen = $my_row["Screen"];
         $MaxQuantity = $my_row["MaxQuantity"];
+        $Screen = $my_row["Screen"];
+        $Price = $my_row["Price"];
+
         require("connection_close.php");
-        return new ProductDetail($ProductID, $ProductDID, $MinQuantity, $Price, $Screen, $MaxQuantity, $ProductName);
+        return new ProductDetail($ProductID, $ProductDID,  $ProductName, $MinQuantity,  $MaxQuantity, $Screen, $Price);
     }
 
     public static function search($key)
     {
         require("connection_connect.php");
         $sql = "SELECT *FROM Product,ProductDetail 
-        WHERE (ProductID like'%$key%'or ProductName like '%$key%'or MinQuantity like'%$key%'or 
+        WHERE (ProductDID like'%$key%'or ProductID like'%$key%'or ProductName like '%$key%'or MinQuantity like'%$key%'or 
         Price like'%$key%'or Screen like'%$key%' or MaxQuantity like'%$key%' )";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
             $ProductID = $my_row["ProductID"];
+            $ProductDID = $my_row["ProductDID"];
             $ProductName = $my_row["ProductName"];
             $MinQuantity = $my_row["MinQuantity"];
             $Price = $my_row["Price"];
             $Screen = $my_row["Screen"];
             $MaxQuantity = $my_row["MaxQuantity"];
-            $ProductDetail_list[] = new ProductDetail($ProductID, $ProductDID, $MinQuantity, $Price, $Screen, $MaxQuantity, $ProductName);
+            $ProductDetail_list[] = new ProductDetail($ProductID, $ProductDID,  $ProductName, $MinQuantity,  $MaxQuantity, $Screen, $Price);
         }
         require("connection_close.php");
 
         return $ProductDetail_list;
     }
-    public static function add($ProductID, $ProductName, $MinQuantity, $Price, $Screen, $MaxQuantity)
+    public static function add($ProductID, $ProductDID, $MinQuantity, $MaxQuantity, $Price)
     {
         require("connection_connect.php");
-        $sql = "SELECT (INSERT INTO ProductDetail(ProductID,MinQuantity,MaxQuantity,Screen,Price)
-        values ('$ProductID','$MinQuantity','$MaxQuantity','$Screen','$Price'),INSERT INTO Product(ProductName)Value '$ProductName')";
+        $sql = "INSERT INTO ProductDetail(ProductDID,MinQuantity,MaxQuantity,Screen,Price)
+        values ('$ProductDID','$MinQuantity','$MaxQuantity','$Screen','$Price')";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "update success $result row";
     }
-    public static function update($ProductID, $MinQuantity, $MaxQuantity, $Screen, $Price)
+    public static function update($ProductDID, $MinQuantity, $MaxQuantity, $Screen, $Price)
     {
         require("connection_connect.php");
         $sql =   "UPDATE `ProductDetail` SET    
                     `MinQuantity`='$MinQuantity',
                     `Maxquantity`='$MaxQuantity',
-                    `ProductID`='$ProductID',
                     `Screen`='$Screen',
                     `Price`='$Price',
                    
-                WHERE `ProductID`='$ProductID'";
+                WHERE `ProductDID`='$ProductDID'";
 
         $result = $conn->query($sql);
         require("connection_close.php");
         return "update success $result row";
     }
 
-    public static function delete($ProductID)
+    public static function delete($ProductDID)
     {
         require_once("connection_connect.php");
-        $sql = "DELETE FROM ProductDetail WHERE ProductID='$ProductID'";
+        $sql = "DELETE FROM ProductDetail WHERE ProductDID='$ProductDID'";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "delete success $result row";

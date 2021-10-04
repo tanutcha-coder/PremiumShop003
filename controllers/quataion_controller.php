@@ -23,7 +23,7 @@ class QuataionController
         $CusID = $_GET['CusID'];
         $Deposit = $_GET['Deposit'];
         $Credit = $_GET['Credit'];
-        
+
         Quatation::Add($No, $Date, $EmID, $CusID, $Deposit, $Credit);
         QuataionController::index();
     }

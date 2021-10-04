@@ -13,13 +13,14 @@
     public function addProductDetail()
     {
         $ProductID = $_GET["ProductID"];
+        $ProductDID = $_GET["ProductDID"];
         $ProductName = $_GET["ProductName"];
         $MinQuantity = $_GET["MinQuantity"];
-        $Price = $_GET["Price"];
-        $Screen = $_GET["Screen"];
         $MaxQuantity = $_GET["MaxQuantity"];
+        $Screen = $_GET["Screen"];
+        $Price = $_GET["Price"];
 
-        ProductDetail::Add($ProductID, $ProductName, $MinQuantity, $MaxQuantity, $Screen, $Price);
+        ProductDetail::Add($ProductID, $ProductDID, $ProductName, $MinQuantity, $MaxQuantity, $Screen, $Price);
         ProductDetailController::index();
     }
     public function search()
@@ -28,36 +29,37 @@
         $ProductDetail_list = ProductDetail::search($key);
         require_once('views/ProductDetail/Index_ProductDetail.php');
     }
-    public function update_quatation()
+    public function update_ProductDetail()
     {
-        $ProductID = $_GET['ProductID'];
-        echo $ProductID;
-        $ProductDetail = ProductDetail::getAll($ProductID);
+        $ProductDID = $_GET['ProductDID'];
+        echo $ProductDID;
+        $ProductDetail = ProductDetail::getAll($ProductDID);
         $ProductDetail_list = ProductDetail::getAll();
         require_once('views/ProductDetail/update_ProductDetail.php');
     }
     public function update()
     {
         $ProductID = $_GET["ProductID"];
+        $ProductDID = $_GET["ProductDID"];
         $ProductName = $_GET["ProductName"];
         $MinQuantity = $_GET["MinQuantity"];
         $Price = $_GET["Price"];
         $Screen = $_GET["Screen"];
         $MaxQuantity = $_GET["MaxQuantity"];
-        ProductDetail::update($ProductID, $ProductName, $MinQuantity, $MaxQuantity, $Screen, $Price);
+        ProductDetail::update($ProductID, $ProductDID, $ProductName, $MinQuantity, $MaxQuantity, $Screen, $Price);
         ProductDetailController::index();
     }
     public function delete_quatation()
     {
-        $ProductName = $_GET['ProductName'];
-        echo $ProductName;
-        $ProductDetail_list = ProductDetail::getAll($ProductName);
+        $ProductDID = $_GET['ProductDID'];
+        echo $ProductDID;
+        $ProductDetail_list = ProductDetail::getAll($ProductDID);
         require_once('views/ProductDetail/delete_ProductDetail.php');
     }
     public function delete()
     {
-        $ProductName = $_GET['ProductName'];
-        ProductDetail::delete($ProductName);
+        $ProductDID = $_GET['ProductDID'];
+        ProductDetail::delete($ProductDID);
         ProductDetailController::index();
     }
 }

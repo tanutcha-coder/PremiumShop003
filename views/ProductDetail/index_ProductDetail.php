@@ -16,7 +16,18 @@
     <div class="container">
         <h1 class="mt-5">ProductDetail Page</h1>
         new ProductDetail<a href=?controller=ProductDetail&action=newProductDetail>Click</a><br>
-
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand"></a>
+                <form method="get" action="" class="d-flex">
+                    <input class="form-control me-2" type="text" name="key" placeholder="Search" aria-label="Search">
+                    <input type="hidden" name="controller" value="ProductDetail" />
+                    <button class="btn btn-outline-Light" type="submit" name="action" value="search">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </nav>
         <table id="ProductDetailtable" class="table table-bordered table-striped">
             <thead>
 
@@ -48,8 +59,8 @@
                         <td><?php echo $pd->Screen ?></td>
                         <td><?php echo $pd->Price ?></td>
 
-                        <td><a href="?controller=ProductDetail&action=update_ProductDetail&ProductID=<?php echo $pd->ProductID ?>" class="btn btn-primary">Edit</td>
-                        <td><a href="?controller=ProductDetail&action=delete_ProductDetail&ProductID=<?php echo $pd->ProductID ?>" class="btn btn-danger">Delete</td>
+                        <td><a href="?controller=ProductDetail&action=update_ProductDetail&ProductDID=<?php echo $pd->ProductDID ?>" class="btn btn-primary">Edit</td>
+                        <td><a href="?controller=ProductDetail&action=delete_ProductDetail&ProductDID=<?php echo $pd->ProductDID ?>" class="btn btn-danger">Delete</td>
                     </tr>
                 <?php
 

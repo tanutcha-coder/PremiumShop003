@@ -11,21 +11,21 @@
 <body>
 
     <div class="container">
-        
+
         <div class="row ">
-        <div class="col">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="col-sm-9  p-3 " >
-                <img  alt="" class="img-fluid" src="https://i.postimg.cc/dV0M4nZM/undraw-Add-files-re-v09g.png">
-            </div>
-        </div>
             <div class="col">
-            <h1 class="mt-5" >New ProductDetail Page</h1><br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="col-sm-9  p-3 ">
+                    <img alt="" class="img-fluid" src="https://i.postimg.cc/dV0M4nZM/undraw-Add-files-re-v09g.png">
+                </div>
+            </div>
+            <div class="col">
+                <h1 class="mt-5">New ProductDetail Page</h1><br>
                 <form method="get" action="">
                     <div class="mb-3">
                         <label for="ProductID" class="form-label"> รหัสสินค้า(ProductID)</label>
@@ -35,18 +35,20 @@
                         <label for="ProductName" class="form-label"> ชื่อสินค้า(ProductID)</label>
                         <input type="text" class="form-control" name="ProductName">
                     </div>
-                        </select><br>
-                        <div class="mb-3">
-                        <label for="" class="form-label">จำนวนชิ้นขั้นต่ำ(MinQuantity)</label>
-                        <select name="EmID">
-                            <?php foreach ($employee_list as $em) {
-                                echo "<option value='$em->EmID'>$em->EmName</option>";
+                    </select><br>
+                    <div class="mb-3">
+                        <label for="MinQuantity" class="form-label">จำนวนชิ้นขั้นต่ำ(MinQuantity)</label>
+                        <select name="MinQuantity">
+                            <?php foreach ($ProductDetail_list as $pd) {
+                                echo "<option value='$pd->MinQuantity'>$pd->MinQuantity</option>";
                             } ?>
                         </select><br>
-                        <div class="mb-3">
-                            <label for="MaxQuantity" class="form-label">จำนวนชิ้นสูงสุด(MaxQuantity)</label>
-                            <input type="int" class="form-control" name="MaxQuantity">
-                        </div>
+                        <label for="MaxQuantity" class="form-label">จำนวนชิ้นสูงสุด(MaxQuantity)</label>
+                        <select name="MaxQuantity">
+                            <?php foreach ($ProductDetail_list as $pd) {
+                                echo "<option value='$pd->MaxQuantity'>$pd->MaxQuantity</option>";
+                            } ?>
+                        </select><br>
                         <div class="mb-3">
                             <label for="Screen" class="form-label">ราคาสกรีน(Screen)</label>
                             <input type="float" class="form-control" name="Credit">
@@ -58,10 +60,10 @@
 
                         <input type="hidden" name="controller" value="ProductDetail" />
                         <div class="d-grid gap-3">
-                       <button class="w-100 btn btn-success btn-lg"  type="submit" name="action" value="addProductDetail">Save</button>
-                        <button class="w-100 btn btn-danger btn-lg"  type="submit" name="action" value="index">Back</button>
+                            <button class="w-100 btn btn-success btn-lg" type="submit" name="action" value="addProductDetail">Save</button>
+                            <button class="w-100 btn btn-danger btn-lg" type="submit" name="action" value="index">Back</button>
                         </div>
-                        
+
                 </form>
 
 
@@ -71,8 +73,8 @@
 
 
         </div>
-        
-        
+
+
     </div>
 
 
