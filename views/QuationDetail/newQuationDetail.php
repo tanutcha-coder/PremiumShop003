@@ -13,21 +13,25 @@
 <div class="container">
     <h1 class="mt-5">New Quatation Detail Page</h1><br>
     <form method="get" action="">
-        <div class="mb-3">
-            <label for="ProductID" class="form-label">รหัสสินค้า (ProductID)</label>
-            <input type="text" class="form-control">
-        </div>
+        
         <div class="mb-3">
             <label for="ProductName" class="form-label">ชื่อสินค้า (ProductName)</label>
             <input type="text" class="form-control">
         </div>
         <div class="mb-3">
-            <label for="Size" class="form-label">ขนาดสินค้า (Size)</label>
-            <select>
+            <label for="CusOrder" class="form-label">จำนวนที่สั่ง (CusOrder)</label>
+            <input type="text" class="form-control">
         </div>
         <div class="mb-3">
-            <label for="Detail" class="form-label">รายละเอียดสินค้า (Detail)</label>
+            <label for="CusScreenOrder" class="form-label">จำนวนสีที่ต้องการสกรีน (CusScreenOrder)</label>
+            <input type="text" class="form-control">
         </div>
+        <label for="ColorID" class="form-label">สี (ColorName)</label> <br>
+        <<select name="ColorID">
+                            <?php foreach ($QuationDetail_list as $QD) {
+                                echo "<option value='$QD->ColorID'>$QD->ColorName</option>";
+                            } ?>
+                        </select><br>
         
         <input type="hidden" name="controller" value="quationdetail">
         <button type="submit" class="btn-btn-primary" name="action" value="index">Back</button>

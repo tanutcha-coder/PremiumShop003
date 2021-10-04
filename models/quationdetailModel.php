@@ -115,7 +115,7 @@ class QuationDetail{
 
     public static function delete($ProductID){
         require_once("connection_connect.php");
-        $sql = "Delete from Product Where ProductID = '$ProductID'";
+        $sql = "Delete from Quatation Where QID = '$QID'";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "delete success $result row";
