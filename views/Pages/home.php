@@ -17,7 +17,7 @@
                             <p class="animated fadeInUp" style="animation-delay: 2s">Welcome to our homepage </p>
                             <button  class="btn btn-info text-white" type="button"><a href="?controller=quataion&action=index" class="nav-link px-2 text-white">Quatation</a></button> 
                             <button class="btn btn-info text-white" type="button"><a href="?controller=quationdetail&action=index" class="nav-link px-2 text-white">QuatationDetail</a></button>
-                            <button class="btn btn-info text-white" type="button">ProductDetail</button>
+                            <button class="btn btn-info text-white" type="button"><a href="?controller=ProductDetail&action=index" class="nav-link px-2 text-white">ProductDetail</a></button>
     
     
 
@@ -27,14 +27,14 @@
                             <p class="animated fadeInUp" style="animation-delay: 2s"></p>
                             <button  class="btn btn-info text-white" type="button"><a href="?controller=quataion&action=index" class="nav-link px-2 text-white">Quatation</a></button> 
                             <button class="btn btn-info text-white" type="button"><a href="?controller=quationdetail&action=index" class="nav-link px-2 text-white">QuatationDetail</a></button>
-                            <button class="btn btn-info text-white" type="button">ProductDetail</button>
+                            <button class="btn btn-info text-white" type="button"><a href="?controller=ProductDetail&action=index" class="nav-link px-2 text-white">ProductDetail</a></button>
                         </div>
                         <div class="carousel-item">
                             <h1 class="animated fadeInDown" style="animation-delay: 1s">Easy<span class="text-info"> to use</span></h1>
                             <p class="animated fadeInUp" style="animation-delay: 2s"></p>
                             <button  class="btn btn-info text-white" type="button"><a href="?controller=quataion&action=index" class="nav-link px-2 text-white">Quatation</a></button> 
                             <button class="btn btn-info text-white" type="button"><a href="?controller=quationdetail&action=index" class="nav-link px-2 text-white">QuatationDetail</a></button>
-                            <button class="btn btn-info text-white" type="button">ProductDetail</button>
+                            <button class="btn btn-info text-white" type="button"><a href="?controller=ProductDetail&action=index" class="nav-link px-2 text-white">ProductDetail</a></button>
                         </div>
                     </div>
                 </div>
