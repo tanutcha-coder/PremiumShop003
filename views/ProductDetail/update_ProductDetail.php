@@ -23,23 +23,28 @@
                 <h1 class="mt-5">Update ProductDetail Page</h1><br>
                 <form method="get" action="">
                     <div class="mb-3">
-                        <label for="ProductID" class="form-label">รหัสสินค้า (ProductID)</label>
-                        <select name="ProductID">
-                            <?php foreach ($ProductDetail_list as $pd) {
-                                echo "<option value='$pd->ProductID'";
-                                if ($ProductDetail_list->ProductID == $pd->ProductID) {
-                                    echo " selected='selected'";
-                                }
-                                echo ">$pd->ProductName</option>";
-                            } ?>
-
-                        </select><br>
                         <div class="mb-3">
-                            <label for="ProductID" class="form-label">ชื่อสินค้า (ProductName)</label>
-                            <select name="ProductID">
+                            <label for="ProductID" class="form-label">รหัสสินค้า (ProductID)</label>
+                            <input type="text" class="form-control" name="ProductID" value="<?php echo $ProductDetail_list->ProductID; ?>" readonly />
+                        </div>
+                        <div class="mb-3">
+                            <label for="ProductDID" class="form-label">รหัสรายละเอียดสินค้า (ProductDID)</label>
+                            <select name="ProductDID">
                                 <?php foreach ($ProductDetail_list as $pd) {
-                                    echo "<option value='$pd->ProductID'";
-                                    if ($ProductDetail_list->ProductID == $pd->ProductID) {
+                                    echo "<option value='$pd->ProductDID'";
+                                    if ($ProductDetail_list->ProductDID == $pd->ProductDID) {
+                                        echo " selected='selected'";
+                                    }
+                                    echo ">$pd->ProductDID</option>";
+                                } ?>
+                            </select><br>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ProductName" class="form-label">ชื่อสินค้า (ProductName)</label>
+                            <select name="ProductName">
+                                <?php foreach ($ProductDetail_list as $pd) {
+                                    echo "<option value='$pd->ProductName'";
+                                    if ($ProductDetail_list->ProductName == $pd->ProductName) {
                                         echo " selected='selected'";
                                     }
                                     echo ">$pd->ProductName</option>";

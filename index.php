@@ -13,7 +13,7 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
     <div class="container-fluid">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <h3>Premium Shop</h3>
-            
+
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
 
                 <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
@@ -25,7 +25,8 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
                 <li><a href="?controller=pages&action=home" class="nav-link px-2 text-white">Home</a></li>
                 <li><a href="?controller=quataion&action=index" class="nav-link px-2 text-white">Quatation</a></li>
                 <li><a href="?controller=quationdetail&action=index" class="nav-link px-2 text-white">QuatationDetail</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                <li><a href="?controller=ProductDetail&action=index" class="nav-link px-2 text-white">ProductDetail</a></li>
+
             </ul>
 
 

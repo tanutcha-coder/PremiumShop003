@@ -37,10 +37,12 @@
                     </div>
                         </select><br>
                         <div class="mb-3">
-                            <label for="MinQuantity" class="form-label">จำนวนชิ้นขั้นต่ำ (MinQuantity)</label>
-                            <input type="int" class="form-control" name="MinQuantity">
-                            
-                        </div>
+                        <label for="" class="form-label">จำนวนชิ้นขั้นต่ำ(MinQuantity)</label>
+                        <select name="EmID">
+                            <?php foreach ($employee_list as $em) {
+                                echo "<option value='$em->EmID'>$em->EmName</option>";
+                            } ?>
+                        </select><br>
                         <div class="mb-3">
                             <label for="MaxQuantity" class="form-label">จำนวนชิ้นสูงสุด(MaxQuantity)</label>
                             <input type="int" class="form-control" name="MaxQuantity">

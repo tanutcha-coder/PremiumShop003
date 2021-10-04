@@ -1,7 +1,8 @@
-<?php class ProductDetailController{
+<?php class ProductDetailController
+{
     public function index()
     {
-        $ProductDetail_list=ProductDetail::getAll();
+        $ProductDetail_list = ProductDetail::getAll();
         require_once('views/ProductDetail/index_ProductDetail.php');
     }
     public function newProductDetail()
@@ -11,14 +12,14 @@
     }
     public function addProductDetail()
     {
-        $ProductID=$_GET["ProductID"];
-        $ProductName=$_GET["ProductName"];
-        $MinQuantity=$_GET["MinQuantity"];
-        $Price=$_GET["Price"];
-        $Screen=$_GET["Screen"];
-        $MaxQuantity=$_GET["MaxQuantity"];
-        
-        ProductDetail::Add($ProductID,$ProductName,$MinQuantity,$MaxQuantity,$Screen,$Price);
+        $ProductID = $_GET["ProductID"];
+        $ProductName = $_GET["ProductName"];
+        $MinQuantity = $_GET["MinQuantity"];
+        $Price = $_GET["Price"];
+        $Screen = $_GET["Screen"];
+        $MaxQuantity = $_GET["MaxQuantity"];
+
+        ProductDetail::Add($ProductID, $ProductName, $MinQuantity, $MaxQuantity, $Screen, $Price);
         ProductDetailController::index();
     }
     public function search()
@@ -31,19 +32,19 @@
     {
         $ProductID = $_GET['ProductID'];
         echo $ProductID;
-        $ProductDetail= ProductDetail::getAll($ProductID);
+        $ProductDetail = ProductDetail::getAll($ProductID);
         $ProductDetail_list = ProductDetail::getAll();
         require_once('views/ProductDetail/update_ProductDetail.php');
     }
     public function update()
     {
-        $ProductID=$_GET["ProductID"];
-        $ProductName=$_GET["ProductName"];
-        $MinQuantity=$_GET["MinQuantity"];
-        $Price=$_GET["Price"];
-        $Screen=$_GET["Screen"];
-        $MaxQuantity=$_GET["MaxQuantity"];
-        ProductDetail::update($ProductID,$ProductName,$MinQuantity,$MaxQuantity,$Screen,$Price);
+        $ProductID = $_GET["ProductID"];
+        $ProductName = $_GET["ProductName"];
+        $MinQuantity = $_GET["MinQuantity"];
+        $Price = $_GET["Price"];
+        $Screen = $_GET["Screen"];
+        $MaxQuantity = $_GET["MaxQuantity"];
+        ProductDetail::update($ProductID, $ProductName, $MinQuantity, $MaxQuantity, $Screen, $Price);
         ProductDetailController::index();
     }
     public function delete_quatation()
@@ -59,5 +60,4 @@
         ProductDetail::delete($ProductName);
         ProductDetailController::index();
     }
-
-}?>
+}

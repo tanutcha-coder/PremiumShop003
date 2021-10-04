@@ -14,6 +14,7 @@
                     <thead>
 
                         <th>ProductID</th>
+                        <th>ProductDID</th>
                         <th>ProductName</th>
                         <th>MinQuantity</th>
                         <th>MaxQuantity</th>
@@ -30,6 +31,7 @@
                         ?>
                         <tr>
                             <td><?php echo $ProductDetail_list->ProductID ?></td>
+                            <td><?php echo $ProductDetail_list->ProductDID ?></td>
                             <td><?php echo $ProductDetail_list->ProductName ?></td>
                             <td><?php echo $ProductDetail_list->MinQuantity  ?></td>
                             <td><?php echo $ProductDetail_list->MaxQuantity ?></td>
@@ -46,10 +48,10 @@
                 <br>
                 <form method="get" action="">
                     <input type="hidden" name="controller" value="ProductDetail" />
-                    <input type="hidden" name="ProductID" value="<?php echo $ProductDetail_list->ProductID; ?>" />
+                    <input type="hidden" name="ProductDID" value="<?php echo $ProductDetail_list->ProductDID; ?>" />
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <button class="btn btn-lg btn-secondary  border-dark bg-dark " type="submit" name="action" value="index">Back</button>
-                    <button class="btn btn-lg btn-secondary  border-danger bg-danger" type="submit" name="action" value="delete">Delete</button>
+                        <button class="btn btn-lg btn-secondary  border-dark bg-dark " type="submit" name="action" value="index">Back</button>
+                        <button class="btn btn-lg btn-secondary  border-danger bg-danger" type="submit" name="action" value="delete">Delete</button>
                     </div>
                 </form>
             </main>
