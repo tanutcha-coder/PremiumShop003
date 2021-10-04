@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Quatation Page</title>
+    <title>ProductDetail Page</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -15,7 +15,7 @@
     
 <div class="container">
     <h1 class="mt-5">ProductDetail Page</h1>
-    new quotation<a href=?controller=quataion&action=newQuatation>Click</a><br>
+    new ProductDetail<a href=?controller=ProductDetail&action=newProductDetail>Click</a><br>
     
 <table id="ProductDetailtable" class="table table-bordered table-striped">
     <thead>
@@ -34,19 +34,21 @@
         <?php
         
         
-        foreach($ProductDetail_list as $pd){
+        foreach($ProductDetail_list as $pd)
+        {
 
         ?>
-        <tr>
-                <td><?php echo $pd->ProductID?></td>
+            <tr>
+                
+                <td><?php echo $pd->ProductDID?></td>
                 <td><?php echo $pd->ProductName?></td>
                 <td><?php echo $pd->MinQuantity?></td>
                 <td><?php echo $pd->MaxQuantity?></td>
                 <td><?php echo $pd->Screen?></td>
                 <td><?php echo $pd->Price?></td>
                 
-                <td><a href="update.php?No=<?php echo $row['No'];?>" class="btn btn-primary">Edit</td>
-                <td><a href="delete.php?No=<?php echo $row['No'];?>" class="btn btn-danger">Delete</td>
+                <td><a href="?controller=ProductDetail&action=update_ProductDetail&ProductID=<?php echo $pd->ProductID ?>" class="btn btn-primary">Edit</td>
+                <td><a href="?controller=ProductDetail&action=delete_ProductDetail&ProductID=<?php echo $pd->ProductID ?>" class="btn btn-danger">Delete</td>
             </tr>
         <?php
 
