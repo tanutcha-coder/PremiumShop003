@@ -15,16 +15,32 @@
         <form method="get" action="">
             <div class="mb-3">
                 <label for="ProductID" class="form-label">รหัสสินค้า (ProductID)</label>
-                <input type="text" class="form-control" value="<?php echo $product_list->ProductID; ?>" readonly />
+                <input type="text" class="form-control" value="<?php echo $QuationDetail->ProductID; ?>" readonly>
             </div>
             <div class="mb-3">
                 <label for="ProDuctName" class="form-label">ขื่อสินค้า (ProductName)</label>
-                <input type="text" class="form-control" value="<?php echo $Product_list->ProductName; ?>">
+                <input type="text" class="form-control" value="<?php echo $QuationDetail->ProductName; ?>">
+            </div>
+            <div class="mb-3">
+                <label for="ProDuctName" class="form-label">สี (ColorName)</label> <br>
+                <select name="color">
+                    <?php foreach ($QuationDetail_list as $quationdetail) {
+                        if ($QuationDetail->ProductID == $quationdetail->ProductID) {
+                            echo "<option value='$quationdetail->ColorID'";
+                            if ($quationdetail->ColorID == $QuationDetail->ColorID) {
+                                echo " selected";
+                            }
+                            echo ">$quationdetail->ColorName</option>";
+                        }
+                    } ?>
+                </select>
+                <!-- <input type="text" class="form-control" value="<?php echo $QuationDetail->ProductName; ?>"> -->
             </div>
 
-                <input type="hidden" name="controller" value="quationdetail">
-                <button type="submit" class="btn-btn-primary" name="action" value="index">Back</button>
-                <button type="submit" class="btn-btn-green" name="action" value="update">Update</button>
+
+            <input type="hidden" name="controller" value="quationdetail">
+            <button type="submit" class="btn-btn-primary" name="action" value="index">Back</button>
+            <button type="submit" class="btn-btn-green" name="action" value="update">Update</button>
 
         </form>
     </div>

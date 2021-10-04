@@ -50,8 +50,8 @@
                         <td><?php echo $quationdetail->CusOrder ?></td>
                         <td><?php echo $quationdetail->CusScreenOrder ?></td>
 
-                        <td><a href="?controller=quationdetail&action=update_quationdetail&No=<?php echo $quationdetail->No ?>" class="btn btn-primary">Edit</td>
-                        <td><a href="?controller=quationdetail&action=delete_quationdetail&No=<?php echo $quationdetail->No ?>" class="btn btn-danger">Delete</td>
+                        <td><a href="?controller=quationdetail&action=update_quationdetail&QID=<?php echo $quationdetail->QID ?>" class="btn btn-primary">Edit</td>
+                        <td><a href="?controller=quationdetail&action=delete_quationdetail&QID=<?php echo $quationdetail->QID ?>" class="btn btn-danger">Delete</td>
                     </tr>
                 <?php
 
