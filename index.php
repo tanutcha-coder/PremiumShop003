@@ -26,7 +26,7 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
                 <li><a href="?controller=quataion&action=index" class="nav-link px-2 text-white">Quatation</a></li>
                 <li><a href="?controller=quationdetail&action=index" class="nav-link px-2 text-white">QuatationDetail</a></li>
                 <li><a href="?controller=ProductDetail&action=index" class="nav-link px-2 text-white">ProductDetail</a></li>
-
+ 
             </ul>
 
 

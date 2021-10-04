@@ -56,22 +56,32 @@ class ProductDetail
     public static function search($key)
     {
         require("connection_connect.php");
-        $sql = "SELECT *FROM Product,ProductDetail 
-        WHERE (ProductDID like'%$key%'or ProductID like'%$key%'or ProductName like '%$key%'or MinQuantity like'%$key%'or 
-        Price like'%$key%'or Screen like'%$key%' or MaxQuantity like'%$key%' )";
+        $sql = "SELECT * FROM `Product` INNER JOIN `ProductDetail`
+        ON `Product`.`ProductID` = `ProductDetail`.`ProductID`
+        WHERE 
+        `Product`.`ProductID` like '%$key%' or
+        `ProductDetail`.`ProductDID` like '%$key%' or
+        `ProductName` like '%$key%' or
+        `MinQuantity` like '%$key%' or
+        `MaxQuantity` like '%$key%' or
+        `Screen` like '%$key%' or
+        `Price` like '%$key%'";
+
         $result = $conn->query($sql);
+        // die($conn->error); //ไว้เช็ค error fetch_assoc()
+
         while ($my_row = $result->fetch_assoc()) {
             $ProductID = $my_row["ProductID"];
             $ProductDID = $my_row["ProductDID"];
             $ProductName = $my_row["ProductName"];
             $MinQuantity = $my_row["MinQuantity"];
-            $Price = $my_row["Price"];
-            $Screen = $my_row["Screen"];
             $MaxQuantity = $my_row["MaxQuantity"];
-            $ProductDetail_list[] = new ProductDetail($ProductID, $ProductDID,  $ProductName, $MinQuantity,  $MaxQuantity, $Screen, $Price);
+            $Screen = $my_row["Screen"];
+            $Price = $my_row["Price"];
+            $ProducDetail_list[] = new ProductDetail($ProductID, $ProductDID,  $ProductName, $MinQuantity,  $MaxQuantity, $Screen, $Price);
         }
-        require("connection_close.php");
 
+        require("connection_close.php");
         return $ProductDetail_list;
     }
     public static function add($ProductID, $ProductDID, $MinQuantity, $MaxQuantity, $Price)

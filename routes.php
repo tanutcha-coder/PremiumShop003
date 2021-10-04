@@ -1,16 +1,17 @@
 <?php
 $controllers = array(
     'pages' => ['home', 'error'],
-    'ProductDetail' => ['index', 'newProductDetail', 'addProductDetail', 'search', 'update_ProductDetail', 'update', 'delete_ProductDetail', 'delete'],
-    'quataion' => ['index', 'newQuatation', 'addQuatation', 'search', 'update_quatation', 'update', 'delete_quatation', 'delete'],
-    'quationdetail' => ['index', 'newQuationDetail', 'addQuationDetail', 'search', 'update_quationdetail', 'update', 'delete_quationdetail', 'delete']
+    'ProductDetail'=>['index', 'newProductDetail', 'addProductDetail', 'search', 'update_ProductDetail', 'update','delete_ProductDetail', 'delete'],
+    'quataion' => ['index', 'newQuatation', 'addQuatation', 'search', 'update_quatation', 'update','delete_quatation', 'delete'],
+    'quationdetail' => ['index', 'newQuationDetail', 'addQuationDetail', 'search', 'update_quationdetail', 'update','delete_quationdetail', 'delete']
 );
 
 function call($controller, $action)
 {
     echo "routes to " . $controller . "-" . $action . "<br>";
     require_once("controllers/" . $controller . "_controller.php");
-    switch ($controller) {
+    switch ($controller) 
+    {
         case "pages":
             $controller = new PagesController();
             break;

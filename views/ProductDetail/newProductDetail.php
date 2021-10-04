@@ -32,7 +32,11 @@
                         <input type="text" class="form-control" name="ProductID">
                     </div>
                     <div class="mb-3">
-                        <label for="ProductName" class="form-label"> ชื่อสินค้า(ProductID)</label>
+                        <label for="ProductDID" class="form-label"> รหัสรายละเอียดสินค้า(ProductDID)</label>
+                        <input type="text" class="form-control" name="ProductDID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ProductName" class="form-label"> ชื่อสินค้า(ProductName)</label>
                         <input type="text" class="form-control" name="ProductName">
                     </div>
                     </select><br>

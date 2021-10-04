@@ -22,6 +22,14 @@
                 <input type="text" class="form-control" value="<?php echo $QuationDetail->ProductName; ?>">
             </div>
             <div class="mb-3">
+            <label for="CusOrder" class="form-label">จำนวนที่สั่ง (CusOrder)</label>
+            <input type="text" class="form-control">
+            </div>
+         <div class="mb-3">
+            <label for="CusScreenOrder" class="form-label">จำนวนสีที่ต้องการสกรีน (CusScreenOrder)</label>
+            <input type="text" class="form-control">
+        </div>
+            <div class="mb-3">
                 <label for="ProDuctName" class="form-label">สี (ColorName)</label> <br>
                 <select name="color">
                     <?php foreach ($QuationDetail_list as $quationdetail) {
